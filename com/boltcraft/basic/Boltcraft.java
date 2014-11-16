@@ -27,6 +27,7 @@ public class Boltcraft
     };
     // items
     public static Item boltiron;
+    public static Item boltgold;
     
     
     
