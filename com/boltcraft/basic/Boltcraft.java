@@ -26,7 +26,9 @@ public class Boltcraft
     		return Items.arrow;
     	}
     };
+    
     // items
+    
     public static Item boltiron;
     public static Item boltgold;
     public static Item boltdiamond;
@@ -35,9 +37,8 @@ public class Boltcraft
     public static Item diamondshard;
     public static Item quartzshard;
     
-    
-    
     // blocks
+    
     public static Block boltblock;
     
     
@@ -45,7 +46,8 @@ public class Boltcraft
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	//items    
+    	//items  
+    	
         boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "IronBolt");
         GameRegistry.registerItem(boltiron, "ironBolt");
         boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "GoldBolt");
@@ -60,6 +62,7 @@ public class Boltcraft
         GameRegistry.registerItem(diamondshard, "diamondShard");
         quartzshard = new Item().setUnlocalizedName("quartzShard").setCreativeTab(bolttab).setTextureName(MODID + ":" + "QuartzShard");
         GameRegistry.registerItem(quartzshard, "quartzShard");
+        
         //blocks
         
         boltblock = new BoltBlock().setBlockName("boltBlock").setCreativeTab(bolttab).setBlockTextureName("emerald_block");
@@ -75,7 +78,10 @@ public class Boltcraft
         GameRegistry.addRecipe(new ItemStack(Boltcraft.diamondshard, 3), new Object[] {"#", '#', Items.diamond});
         GameRegistry.addRecipe(new ItemStack(Boltcraft.quartzshard, 3), new Object[] {"#", '#', Items.quartz});
         
+        //generations
+        
         GameRegistry.registerWorldGenerator(new BoltGeneration(), 1);
+        
 
     }
 }
