@@ -51,4 +51,3 @@ public class Boltcraft
 }
 
 
-//Test sucsessfull! tvou mamku Ebal
