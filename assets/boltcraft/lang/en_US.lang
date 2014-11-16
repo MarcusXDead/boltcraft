@@ -1,3 +1,5 @@
 itemGroup.Boltcraft=Boltcraft
 item.ironBolt.name=Iron Bolt
+item.goldBolt.name=Gold Bolt
 tile.boltBlock.name=Bolt Block
+
