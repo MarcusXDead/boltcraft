@@ -50,3 +50,6 @@ public class Boltcraft
         GameRegistry.registerBlock(boltblock, "blockBlock");
     }
 }
+
+
+//Test comment
