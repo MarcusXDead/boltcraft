@@ -29,7 +29,11 @@ public class Boltcraft
     // items
     public static Item boltiron;
     public static Item boltgold;
+    public static Item boltdiamond;
+    public static Item boltquartz;
     public static Item ironnugget;
+    public static Item diamondshard;
+    public static Item quartzshard;
     
     
     
@@ -46,6 +50,10 @@ public class Boltcraft
         GameRegistry.registerItem(boltiron, "ironBolt");
         boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
         GameRegistry.registerItem(boltgold, "goldBolt");
+        boltdiamond = new Item().setUnlocalizedName("diamondBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        GameRegistry.registerItem(boltdiamond, "diamondBolt");
+        boltquartz = new Item().setUnlocalizedName("quartzBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        GameRegistry.registerItem(boltquartz, "quartzBolt");
         ironnugget = new Item().setUnlocalizedName("ironNugget").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
         GameRegistry.registerItem(ironnugget, "ironNugget");
         //blocks
