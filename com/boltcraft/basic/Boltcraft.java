@@ -46,7 +46,7 @@ public class Boltcraft
     public void init(FMLInitializationEvent event)
     {
     	//items    
-        boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "IronBolt");
         GameRegistry.registerItem(boltiron, "ironBolt");
         boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
         GameRegistry.registerItem(boltgold, "goldBolt");
