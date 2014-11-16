@@ -31,7 +31,7 @@ public class BoltGeneration implements IWorldGenerator
 
 	private void generateSurface(World world, Random random, int x, int z)
 	{
-		this.addOreSpawn(Tutorial.tutorialBlock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
+		this.addOreSpawn(Boltcraft.boltblock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
 	}
 
 	private void generateNether(World world, Random random, int x, int z)
@@ -39,7 +39,7 @@ public class BoltGeneration implements IWorldGenerator
 		int Xcoord = x + random.nextInt(16);
 	    int Ycoord = 10 + random.nextInt(128);
 	    int Zcoord = z + random.nextInt(16);
-	    (new WorldGenMinable(Tutorial.tutorialBlock, 1, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
+	    (new WorldGenMinable(Boltcraft.boltblock, 1, 15, Blocks.netherrack)).generate(world, random, Xcoord, Ycoord, Zcoord);
 	}
 
 	/**
