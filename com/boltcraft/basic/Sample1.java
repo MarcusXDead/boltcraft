@@ -55,4 +55,5 @@ public boolean generate(World world, Random par2Random, int 0, int 0, int 0) {
 return true;
   }
 }
+}
 
