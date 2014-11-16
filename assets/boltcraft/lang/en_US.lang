@@ -3,8 +3,8 @@ item.ironBolt.name=Iron Bolt
 item.goldBolt.name=Gold Bolt
 item.diamondBolt.name=Diamond Bolt
 item.quartzBolt.name=Quartz Bolt
-item.ironnugget.name=Iron Nugget
-item.diamondshard.name=Diamond Shard
-item.quartzshard.name=Quartz Shard
+item.ironNugget.name=Iron Nugget
+item.diamondShard.name=Diamond Shard
+item.quartzShard.name=Quartz Shard
 tile.boltBlock.name=Bolt Block
 
