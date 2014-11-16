@@ -7,6 +7,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -28,6 +29,7 @@ public class Boltcraft
     // items
     public static Item boltiron;
     public static Item boltgold;
+    public static Item ironnugget;
     
     
     
@@ -44,12 +46,22 @@ public class Boltcraft
         GameRegistry.registerItem(boltiron, "ironBolt");
         boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
         GameRegistry.registerItem(boltgold, "goldBolt");
-        
+        ironnugget = new Item().setUnlocalizedName("ironNugget").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        GameRegistry.registerItem(ironnugget, "ironNugget");
         //blocks
         
         boltblock = new BoltBlock().setBlockName("boltBlock").setCreativeTab(bolttab).setBlockTextureName("dirt");
         GameRegistry.registerBlock(boltblock, "blockBlock");
+        
+        //recipes
+        
+        GameRegistry.addRecipe(new ItemStack(Boltcraft.boltiron, 1), new Object[] {"#", '#', Boltcraft.ironnugget});
+        GameRegistry.addRecipe(new ItemStack(Boltcraft.ironnugget, 9), new Object[] {"#", '#', Items.iron_ingot});
+        GameRegistry.addRecipe(new ItemStack(Boltcraft.boltgold, 1), new Object[] {"#", '#', Boltcraft.ironnugget});
+       
     }
 }
+    
+    
 
 
