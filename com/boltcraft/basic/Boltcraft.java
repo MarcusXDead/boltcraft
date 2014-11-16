@@ -48,9 +48,9 @@ public class Boltcraft
     	//items    
         boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "IronBolt");
         GameRegistry.registerItem(boltiron, "ironBolt");
-        boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "GoldBolt");
         GameRegistry.registerItem(boltgold, "goldBolt");
-        boltdiamond = new Item().setUnlocalizedName("diamondBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
+        boltdiamond = new Item().setUnlocalizedName("diamondBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "DiamondBolt");
         GameRegistry.registerItem(boltdiamond, "diamondBolt");
         boltquartz = new Item().setUnlocalizedName("quartzBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "default");
         GameRegistry.registerItem(boltquartz, "quartzBolt");
