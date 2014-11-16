@@ -31,7 +31,7 @@ public class BoltGeneration implements IWorldGenerator
 
 	private void generateSurface(World world, Random random, int x, int z)
 	{
-		this.addOreSpawn(Boltcraft.boltblock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
+		this.addOreSpawn(Boltcraft.boltblock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 15, 50);
 	}
 
 	private void generateNether(World world, Random random, int x, int z)

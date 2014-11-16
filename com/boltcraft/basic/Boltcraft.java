@@ -75,6 +75,8 @@ public class Boltcraft
         GameRegistry.addRecipe(new ItemStack(Boltcraft.diamondshard, 3), new Object[] {"#", '#', Items.diamond});
         GameRegistry.addRecipe(new ItemStack(Boltcraft.quartzshard, 3), new Object[] {"#", '#', Items.quartz});
         
+        GameRegistry.registerWorldGenerator(new BoltGeneration(), 1);
+
     }
 }
     
