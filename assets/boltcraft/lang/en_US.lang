@@ -7,6 +7,6 @@ item.ironNugget.name=Iron Nugget
 item.diamondShard.name=Diamond Shard
 item.quartzShard.name=Quartz Shard
 tile.boltBlock.name=Bolt Block
-tile.BoltStructureBlockGen.name=Bolt Block Structure
+tile.boltStructureBlockGen.name=Bolt Block Structure
 
 
