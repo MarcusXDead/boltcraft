@@ -40,6 +40,7 @@ public class Boltcraft
     // blocks
     
     public static Block boltblock;
+    public static Block BoltStructureBlockGen;
     
     
     
@@ -67,6 +68,8 @@ public class Boltcraft
         
         boltblock = new BoltBlock().setBlockName("boltBlock").setCreativeTab(bolttab).setBlockTextureName("emerald_block");
         GameRegistry.registerBlock(boltblock, "blockBlock");
+        BoltStructureBlockGen = new BoltStructureBlockGen().setBlockName("boltStructureBlockGen").setCreativeTab(bolttab).setBlockTextureName("diamond_block");
+        GameRegistry.registerBlock(BoltStructureBlockGen, "boltStructureBlockGen");
         
         //recipes
           
