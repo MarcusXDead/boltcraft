@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -40,6 +41,19 @@ public class Boltcraft
     // blocks
     
     public static Block boltblock;
+    public static Block bolttwister;
+ 
+    @SidedProxy(clientSide = Constants.CLIENT_PROXY_CLASS, serverSide = Constants.SERVER_PROXY_CLASS)
+    public static CommonProxy proxy;
+
+    
+    public static void init() {
+ 
+        bolttwister = new BoltTwister();
+       
+        
+    }
+
     
     
     
