@@ -113,6 +113,7 @@ public class Boltcraft
         //generations
         
         GameRegistry.registerWorldGenerator(new BoltGeneration(), 1);
+        GameRegistry.registerWorldGenerator(new Smallcastle(), 1);
         
 
     }
