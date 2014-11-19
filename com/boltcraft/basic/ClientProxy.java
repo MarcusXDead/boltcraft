@@ -14,13 +14,13 @@ public static final Map<Item, ModelBiped> armorModels = new HashMap<Item, ModelB
 	
 	public static void register_renderers(){
 		
-		ModelboltArmorSample custom_armor = new ModelboltArmorSample(1F);
-		ModelboltArmorSample custom_legs = new ModelboltArmorSample(0.5F);
+		ModelboltArmorSample boltIronArmor = new ModelboltArmorSample(1F);
+		ModelboltArmorSample boltIronLegs = new ModelboltArmorSample(0.5F);
 		
-		armorModels.put(Boltcraft.boltIronHelmet, custom_armor);
-		armorModels.put(Boltcraft.boltIronChest, custom_armor);
-		armorModels.put(Boltcraft.boltIronLegs, custom_legs);
-		armorModels.put(Boltcraft.boltIronBoots, custom_armor);
+		armorModels.put(Boltcraft.boltIronHelmet, boltIronArmor);
+		armorModels.put(Boltcraft.boltIronChest, boltIronArmor);
+		armorModels.put(Boltcraft.boltIronLegs, boltIronLegs);
+		armorModels.put(Boltcraft.boltIronBoots, boltIronArmor);
 	}
 }
 	
