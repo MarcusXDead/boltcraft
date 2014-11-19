@@ -21,7 +21,7 @@ public class BoltArmor extends ItemArmor {
 	
 	@Override
 	@SideOnly(Side.CLIENT) public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {  ModelBiped armorModel = null; if(itemStack != null){ if(stack.getItem() instanceof BoltArmor){ } }  }
-	int type = ((ItemArmor)stack.getItem()).armorType;
+	int type = ((ItemArmor)()).armorType;
 	if(type == 1 || type == 3){ armorModel = Boltcraft.proxy.getArmorModel(0); } 
 	else { armorModel = Boltcraft.proxy.getArmorModel(1);}
 
