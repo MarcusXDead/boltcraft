@@ -10,7 +10,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import cpw.mods.fml.common.SidedProxy;
-//import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
@@ -22,19 +22,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
 
-//@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
-//@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+@Mod(modid = References.mod_id, version = References.VERSION, name = References.name)
 
 public class Boltcraft
 {
-
 	
-	
-
  
 	// proxy for armor
-	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
-    public static CommonProxy proxy;
+			@SidedProxy(clientSide=References.proxy_client, serverSide=References.proxy_common)
+			public static CommonProxy proxy_common;
+			public static ClientProxy proxy_client;
 	
 	@Instance(References.MODID)
 	public static Boltcraft modInstance;
@@ -75,18 +72,10 @@ public class Boltcraft
     public static Block bolttwister;
     public static Block bolttwisterActive;
  
-
-
-    
-    
-
-
     public static Block BoltStructureBlockGen;
     public static Block Smallcastle;
 
-    
-    
-    
+  
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
@@ -145,6 +134,10 @@ public class Boltcraft
         
         GameRegistry.registerWorldGenerator(new BoltGeneration(), 1);
         GameRegistry.registerWorldGenerator(new Smallcastle(), 1);
+        
+        //proxy
+        
+        ClientProxy.register_renderers();
         
 
     }
