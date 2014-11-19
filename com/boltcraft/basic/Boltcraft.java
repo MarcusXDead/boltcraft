@@ -21,8 +21,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
+@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
 
+<<<<<<< HEAD
 @Mod(modid = References.mod_id, version = References.VERSION, name = References.name)
+=======
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+>>>>>>> origin/master
 
 public class Boltcraft
 {
