@@ -2,6 +2,7 @@ package com.boltcraft.basic;
 
 import com.boltcraft.basic.References;
 import com.boltcraft.basic.Resource;
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -14,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -33,6 +35,10 @@ public class Boltcraft
 	// proxy for armor
 	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
     public static CommonProxy proxy;
+	
+	@Instance(References.MODID)
+	public static Boltcraft modInstance;
+	
 	@EventHandler public void load(FMLInitializationEvent e) { }
     
     public static CreativeTabs bolttab = new CreativeTabs("Boltcraft"){
@@ -67,16 +73,12 @@ public class Boltcraft
     
     public static Block boltblock;
     public static Block bolttwister;
+    public static Block bolttwisterActive;
  
 
 
     
-    public static void init() {
- 
-        bolttwister = new BoltTwister();
-       
-        
-    }
+    
 
 
     public static Block BoltStructureBlockGen;
@@ -124,6 +126,10 @@ public class Boltcraft
         GameRegistry.registerBlock(boltblock, "blockBlock");
         BoltStructureBlockGen = new BoltStructureBlockGen().setBlockName("boltStructureBlockGen").setCreativeTab(bolttab).setBlockTextureName("diamond_block");
         GameRegistry.registerBlock(BoltStructureBlockGen, "boltStructureBlockGen");
+        bolttwisterActive = new BoltTwister(true).setBlockName("BoltTwisterActive");
+        GameRegistry.registerBlock(bolttwisterActive, "BolttwisterActive");
+        bolttwister = new BoltTwister(true).setBlockName("BoltTwister");
+        GameRegistry.registerBlock(bolttwister, "BoltTwister");
         
         //recipes
           
