@@ -1,16 +1,29 @@
 package com.boltcraft.basic;
 
-import net.minecraft.client.model.ModelBiped;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ClientProxy extends CommonProxy { 
+
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.item.Item;
+
+public class ClientProxy extends CommonProxy {
 	
-	private static final ModelboltArmorSample BoltironChest = new ModelboltArmorSample(1.0f);
-	private static final ModelboltArmorSample BoltironLegs = new ModelboltArmorSample(0.5f);
-	@Override 
-	public ModelBiped getArmorModel(int id){ switch (id) { case 0: return BoltironChest; case 1: return BoltironLegs; default: break; } 
-	return BoltironChest; 
-	//default, if whenever you should have passed on a wrong id } }
+	public static final Map<Item, ModelBiped> armorModels = new HashMap<Item, ModelBiped>();
+	
+	public static void register_renderers(){
+		
+		ModelboltArmorSample custom_armor = new ModelboltArmorSample(1F);
+		ModelboltArmorSample custom_legs = new ModelboltArmorSample(0.5F);
+		
+		armorModels.put(Boltcraft.BoltironHelmet, custom_armor);
+		armorModels.put(Boltcraft.BoltironChest, custom_armor);
+		armorModels.put(Boltcraft.BoltironLegs, custom_legs);
+		armorModels.put(Boltcraft.BoltironBoots, custom_armor);
+
 	}
+
+}
 
 //package tutorial;
 	//import net.minecraft.client.model.ModelBiped;
@@ -22,4 +35,4 @@ public class ClientProxy extends CommonProxy {
 	//default, if whenever you should have passed on a wrong id } }
 
 
-}
+
