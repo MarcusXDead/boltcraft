@@ -22,16 +22,16 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Boltcraft
 {
-	// proxy for armor
-	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
-	public static CommonProxy proxy;
-	@EventHandler public void load(FMLInitializationEvent e) { }
-	//
+
 	
 	
     public static final String MODID = "Boltcraft";
     public static final String VERSION = "0.3";
-    
+ 
+	// proxy for armor
+	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
+    public static CommonProxy proxy;
+	@EventHandler public void load(FMLInitializationEvent e) { }
     
     public static CreativeTabs bolttab = new CreativeTabs("Boltcraft"){
     	public Item getTabIconItem(){
@@ -40,7 +40,11 @@ public class Boltcraft
     };
     
     //EnumArmorMaterial name = EnumHelper.addArmorMaterial(String name, int durability, int[] reductionAmounts, int enchantability)
-    public static ArmorMaterial BoltArmor = EnumHelper.addArmorMaterial("BOLTARMOR", 10,new int[]{3, 4, 5, 6}, 30);
+    public static ArmorMaterial
+    
+    BoltIronArmor = EnumHelper.addArmorMaterial("BoltIronArmor", 10,new int[]{3, 4, 5, 6}, 30);
+    
+    //armor
     
     public static Item BoltironChest;
     public static Item BoltironLegs;
@@ -62,8 +66,7 @@ public class Boltcraft
     public static Block boltblock;
     public static Block bolttwister;
  
-    @SidedProxy(clientSide = Constants.CLIENT_PROXY_CLASS, serverSide = Constants.SERVER_PROXY_CLASS)
-    public static CommonProxy proxy;
+
 
     
     public static void init() {
@@ -75,6 +78,7 @@ public class Boltcraft
 
 
     public static Block BoltStructureBlockGen;
+    public static Block Smallcastle;
 
     
     
@@ -84,15 +88,15 @@ public class Boltcraft
     {
     	//armor
     	
-    	BoltironHelmet = new BoltArmor(BoltArmor, 3000, 0).setUnlocalizedName("BoltironHelmet");//setTextureName()
-    	BoltironChest = new BoltArmor(BoltArmor, 3001, 1).setUnlocalizedName("BoltironChest");
-    	BoltironLegs = new BoltArmor(BoltArmor, 3002, 2).setUnlocalizedName("BoltironLeggins");
-    	BoltironBoots = new BoltArmor(BoltArmor, 3003, 3).setUnlocalizedName("BoltironBoots");
+    	BoltironHelmet = new BoltArmor(BoltIronArmor, 3000, 0).setUnlocalizedName("boltironHelmet").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronHelm");
+    	GameRegistry.registerItem(BoltironHelmet, "boltironHelmet");
+    	BoltironChest = new BoltArmor(BoltIronArmor, 3001, 1).setUnlocalizedName("boltironChest").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronChest" );
+    	GameRegistry.registerItem(BoltironChest, "boltironChest");
+    	BoltironLegs = new BoltArmor(BoltIronArmor, 3002, 2).setUnlocalizedName("boltironLeggins").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronLegs");
+    	GameRegistry.registerItem(BoltironLegs, "boltironLegs");
+    	BoltironBoots = new BoltArmor(BoltIronArmor, 3003, 3).setUnlocalizedName("boltironBoots").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronBoots");
+    	GameRegistry.registerItem(BoltironBoots, "boltironBoots");
     	
-    	GameRegistry.registerItem(BoltironHelmet, "3D Helmet");
-    	GameRegistry.registerItem(BoltironChest, "3D Chest");
-    	GameRegistry.registerItem(BoltironLegs, "3D Legs");
-    	GameRegistry.registerItem(BoltironBoots, "3D Boots");
     	
     	
     	//items  

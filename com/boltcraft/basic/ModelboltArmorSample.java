@@ -8,7 +8,8 @@ import net.minecraft.entity.Entity;
 public class ModelboltArmorSample extends ModelBiped
 {
   //fields
-    
+   
+
     ModelRenderer plateback;
     ModelRenderer platefront;
     ModelRenderer plateright;
@@ -302,6 +303,66 @@ public class ModelboltArmorSample extends ModelBiped
       boltarmleftupside.setTextureSize(64, 64);
       boltarmleftupside.mirror = true;
       setRotation(boltarmleftupside, 0F, 0F, 0F);
+      
+      //Fixing shapes!
+      
+  	//Body shapes
+      this.bipedBody.addChild(plateback);
+      this.bipedBody.addChild(platefront);
+      this.bipedBody.addChild(boltplateback1);
+      this.bipedBody.addChild(boltplateback2);
+      this.bipedBody.addChild(boltplateback3);
+      this.bipedBody.addChild(boltplateback4);
+      this.bipedBody.addChild(boltplateback5);
+      this.bipedBody.addChild(boltplateback6);
+      this.bipedBody.addChild(boltplateback7);
+      this.bipedBody.addChild(boltplateback8);
+      this.bipedBody.addChild(boltplatefrontplate1);
+      this.bipedBody.addChild(boltplatefrontplate2);
+      this.bipedBody.addChild(boltplatefrontplate3);
+      this.bipedBody.addChild(boltplatefrontplate4);
+      this.bipedBody.addChild(boltplatefrontplate5);
+        
+      //Head shapes
+      this.bipedHead.addChild(plateheadtop);
+      this.bipedHead.addChild(plateheadleft);
+      this.bipedHead.addChild(plateheadright);
+      this.bipedHead.addChild(plateheadbacklow);
+      this.bipedHead.addChild(plateheadfronttop);
+      this.bipedHead.addChild(plateheadfrontleft);
+      this.bipedHead.addChild(plateheadfrontright);
+      this.bipedHead.addChild(plateheadfrontrighttop);
+      this.bipedHead.addChild(plateheadfrontlefttop);
+     
+      //Left arm shapes
+      this.bipedLeftArm.addChild(plateleft);
+      this.bipedLeftArm.addChild(boltarmleftfront);
+      this.bipedLeftArm.addChild(boltarmleftback);
+      this.bipedLeftArm.addChild(boltarmleftfrontup);
+      this.bipedLeftArm.addChild(boltarmleftbackup);
+      this.bipedLeftArm.addChild(boltarmleftupside);
+      
+      //Right arm shapes
+      this.bipedRightArm.addChild(plateright);
+      this.bipedRightArm.addChild(boltarmrightfront);
+      this.bipedRightArm.addChild(boltarmrightback);
+      this.bipedRightArm.addChild(boltarmrightfrontup);
+      this.bipedRightArm.addChild(boltarmrightbackup);
+      this.bipedRightArm.addChild(boltarmrightupside);
+      
+      //Left leg shapes
+      this.bipedLeftLeg.addChild(plateleftlegfront);
+      this.bipedLeftLeg.addChild(boltleftlegfront);
+      
+      //Right leg shapes
+      this.bipedRightLeg.addChild(platerightlegfront);
+      this.bipedRightLeg.addChild(boltrightlegfront);
+  	
+      
+      
+      
+      
+      
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -360,6 +421,8 @@ public class ModelboltArmorSample extends ModelBiped
   
   public ModelboltArmorSample(float f)
   {super(f);}
+  
+  
   
 }
 
