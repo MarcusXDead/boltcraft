@@ -20,10 +20,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-
-
-@Mod(modid = References.MODID, version = References.VERSION, name = References.name)
-
+@Mod(modid = References.mod_id, version = References.VERSION, name = References.name)
 
 public class Boltcraft
 {
