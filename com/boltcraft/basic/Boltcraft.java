@@ -1,5 +1,7 @@
 package com.boltcraft.basic;
 
+import com.boltcraft.basic.References;
+import com.boltcraft.basic.Resource;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -12,21 +14,21 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = Boltcraft.MODID, name="Boltcraft", version = Boltcraft.VERSION)
-@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
+
+
+//@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
+//@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Boltcraft
 {
 
 	
 	
-    public static final String MODID = "Boltcraft";
-    public static final String VERSION = "0.3";
+
  
 	// proxy for armor
 	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
@@ -88,32 +90,32 @@ public class Boltcraft
     {
     	//armor
     	
-    	BoltironHelmet = new BoltArmor(BoltIronArmor, 3000, 0).setUnlocalizedName("boltironHelmet").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronHelm");
+    	BoltironHelmet = new BoltArmor(BoltIronArmor, 3000, 0).setUnlocalizedName("boltironHelmet").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronHelm");
     	GameRegistry.registerItem(BoltironHelmet, "boltironHelmet");
-    	BoltironChest = new BoltArmor(BoltIronArmor, 3001, 1).setUnlocalizedName("boltironChest").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronChest" );
+    	BoltironChest = new BoltArmor(BoltIronArmor, 3001, 1).setUnlocalizedName("boltironChest").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronChest" );
     	GameRegistry.registerItem(BoltironChest, "boltironChest");
-    	BoltironLegs = new BoltArmor(BoltIronArmor, 3002, 2).setUnlocalizedName("boltironLeggins").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronLegs");
+    	BoltironLegs = new BoltArmor(BoltIronArmor, 3002, 2).setUnlocalizedName("boltironLeggins").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronLegs");
     	GameRegistry.registerItem(BoltironLegs, "boltironLegs");
-    	BoltironBoots = new BoltArmor(BoltIronArmor, 3003, 3).setUnlocalizedName("boltironBoots").setCreativeTab(bolttab).setTextureName(MODID + ":" + "boltArmourIronBoots");
+    	BoltironBoots = new BoltArmor(BoltIronArmor, 3003, 3).setUnlocalizedName("boltironBoots").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronBoots");
     	GameRegistry.registerItem(BoltironBoots, "boltironBoots");
     	
     	
     	
     	//items  
     	
-        boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "IronBolt");
+        boltiron = new Item().setUnlocalizedName("ironBolt").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "IronBolt");
         GameRegistry.registerItem(boltiron, "ironBolt");
-        boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "GoldBolt");
+        boltgold = new Item().setUnlocalizedName("goldBolt").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "GoldBolt");
         GameRegistry.registerItem(boltgold, "goldBolt");
-        boltdiamond = new Item().setUnlocalizedName("diamondBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "DiamondBolt");
+        boltdiamond = new Item().setUnlocalizedName("diamondBolt").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "DiamondBolt");
         GameRegistry.registerItem(boltdiamond, "diamondBolt");
-        boltquartz = new Item().setUnlocalizedName("quartzBolt").setCreativeTab(bolttab).setTextureName(MODID + ":" + "QuartzBolt");
+        boltquartz = new Item().setUnlocalizedName("quartzBolt").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "QuartzBolt");
         GameRegistry.registerItem(boltquartz, "quartzBolt");
-        ironnugget = new Item().setUnlocalizedName("ironNugget").setCreativeTab(bolttab).setTextureName(MODID + ":" + "IronNugget");
+        ironnugget = new Item().setUnlocalizedName("ironNugget").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "IronNugget");
         GameRegistry.registerItem(ironnugget, "ironNugget");
-        diamondshard = new Item().setUnlocalizedName("diamondShard").setCreativeTab(bolttab).setTextureName(MODID + ":" + "DiamondNugget");
+        diamondshard = new Item().setUnlocalizedName("diamondShard").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "DiamondNugget");
         GameRegistry.registerItem(diamondshard, "diamondShard");
-        quartzshard = new Item().setUnlocalizedName("quartzShard").setCreativeTab(bolttab).setTextureName(MODID + ":" + "QuartzShard");
+        quartzshard = new Item().setUnlocalizedName("quartzShard").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "QuartzShard");
         GameRegistry.registerItem(quartzshard, "quartzShard");
         
         //blocks
