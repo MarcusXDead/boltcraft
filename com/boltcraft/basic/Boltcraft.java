@@ -10,7 +10,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.network.NetworkRegistry;
+//import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
