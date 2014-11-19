@@ -83,7 +83,7 @@ public class Boltcraft
     	GameRegistry.registerItem(boltIronHelmet, "boltironHelmet");
     	boltIronChest = new BoltArmorNew(boltIronArmor, 3001, 1).setUnlocalizedName("boltIronChest").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronChest" );
     	GameRegistry.registerItem(boltIronChest, "boltironChest");
-    	boltIronLegs = new BoltArmorNew(boltIronArmor, 3002, 2).setUnlocalizedName("boltIronLeggins").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronLegs");
+    	boltIronLegs = new BoltArmorNew(boltIronArmor, 3002, 2).setUnlocalizedName("boltIronLegs").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronLegs");
     	GameRegistry.registerItem(boltIronLegs, "boltironLegs");
     	boltIronBoots = new BoltArmorNew(boltIronArmor, 3003, 3).setUnlocalizedName("boltIronBoots").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronBoots");
     	GameRegistry.registerItem(boltIronBoots, "boltironBoots");
