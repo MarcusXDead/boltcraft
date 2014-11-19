@@ -23,7 +23,7 @@ public class BoltArmor extends ItemArmor {
 	int type = ((ItemArmor)stack.getItem()).armorType;
 	if(type == 1 || type == 3){ armorModel = Boltcraft.proxy.getArmorModel(0); } 
 	else { armorModel = Boltcraft.proxy.getArmorModel(1);}
-}
+
 
 if(armorModel != null){ 
 	armorModel.bipedHead.showModel = armorSlot == 0; armorModel.bipedHeadwear.showModel = armorSlot == 0; armorModel.bipedBody.showModel = armorSlot == 1 || armorSlot == 2; armorModel.bipedRightArm.showModel = armorSlot == 1; armorModel.bipedLeftArm.showModel = armorSlot == 1; armorModel.bipedRightLeg.showModel = armorSlot == 2 || armorSlot == 3; armorModel.bipedLeftLeg.showModel = armorSlot == 2 || armorSlot == 3; armorModel.isSneak = entityLiving.isSneaking(); armorModel.isRiding = entityLiving.isRiding(); armorModel.isChild = entityLiving.isChild(); armorModel.heldItemRight = entityLiving.getCurrentItemOrArmor(0) != null ? 1 :0;

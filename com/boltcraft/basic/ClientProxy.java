@@ -4,8 +4,8 @@ import net.minecraft.client.model.ModelBiped;
 
 public class ClientProxy extends CommonProxy { 
 	
-	private static final Boltcraft BoltironChest = new Boltcraft(1.0f);
-	private static final Boltcraft BoltironLegs = new Boltcraft(0.5f);
+	private static final ModelboltArmorSample BoltironChest = new ModelboltArmorSample(1.0f);
+	private static final ModelboltArmorSample BoltironLegs = new ModelboltArmorSample(0.5f);
 	@Override 
 	public ModelBiped getArmorModel(int id){ switch (id) { case 0: return BoltironChest; case 1: return BoltironLegs; default: break; } 
 	return BoltironChest; 
