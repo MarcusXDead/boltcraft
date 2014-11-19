@@ -12,13 +12,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Boltcraft.MODID, name="Boltcraft", version = Boltcraft.VERSION)
-//@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
+@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
 
 public class Boltcraft
 {
@@ -29,10 +29,8 @@ public class Boltcraft
     public static final String VERSION = "0.3";
  
 	// proxy for armor
-    
 	@SidedProxy(serverSide="boltcraft.CommonProxy", clientSide="boltcraft.ClientProxy")
-    public static CommonProxy CommonProxy;
-	public static ClientProxy ClientProxy;
+    public static CommonProxy proxy;
 	@EventHandler public void load(FMLInitializationEvent e) { }
     
     public static CreativeTabs bolttab = new CreativeTabs("Boltcraft"){
