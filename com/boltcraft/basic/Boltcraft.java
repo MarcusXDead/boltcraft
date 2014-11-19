@@ -22,9 +22,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = References.mod_id, version = References.VERSION, name = References.name)
 
-@Mod(modid = References.mod_id, version = References.VERSION, name = References.name)
-
-
 public class Boltcraft
 {
 	
