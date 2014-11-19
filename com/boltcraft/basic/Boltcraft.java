@@ -44,14 +44,14 @@ public class Boltcraft
     //EnumArmorMaterial name = EnumHelper.addArmorMaterial(String name, int durability, int[] reductionAmounts, int enchantability)
     public static ArmorMaterial
     
-    BoltIronArmor = EnumHelper.addArmorMaterial("BoltIronArmor", 10,new int[]{3, 4, 5, 6}, 30);
+    boltIronArmor = EnumHelper.addArmorMaterial("boltIronArmor", 10,new int[]{3, 4, 5, 6}, 30);
     
     //armor
     
-    public static Item BoltironChest;
-    public static Item BoltironLegs;
-    public static Item BoltironBoots;
-    public static Item BoltironHelmet;
+    public static Item boltIronChest;
+    public static Item boltIronLegs;
+    public static Item boltIronBoots;
+    public static Item boltIronHelmet;
     
     // items
     
@@ -90,14 +90,14 @@ public class Boltcraft
     {
     	//armor
     	
-    	BoltironHelmet = new BoltArmor(BoltIronArmor, 3000, 0).setUnlocalizedName("boltironHelmet").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronHelm");
-    	GameRegistry.registerItem(BoltironHelmet, "boltironHelmet");
-    	BoltironChest = new BoltArmor(BoltIronArmor, 3001, 1).setUnlocalizedName("boltironChest").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronChest" );
-    	GameRegistry.registerItem(BoltironChest, "boltironChest");
-    	BoltironLegs = new BoltArmor(BoltIronArmor, 3002, 2).setUnlocalizedName("boltironLeggins").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronLegs");
-    	GameRegistry.registerItem(BoltironLegs, "boltironLegs");
-    	BoltironBoots = new BoltArmor(BoltIronArmor, 3003, 3).setUnlocalizedName("boltironBoots").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronBoots");
-    	GameRegistry.registerItem(BoltironBoots, "boltironBoots");
+    	boltIronHelmet = new BoltArmorNew(boltIronArmor, 3000, 0).setUnlocalizedName("boltIronHelmet").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronHelm");
+    	GameRegistry.registerItem(boltIronHelmet, "boltironHelmet");
+    	boltIronChest = new BoltArmorNew(boltIronArmor, 3001, 1).setUnlocalizedName("boltIronChest").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronChest" );
+    	GameRegistry.registerItem(boltIronChest, "boltironChest");
+    	boltIronLegs = new BoltArmorNew(boltIronArmor, 3002, 2).setUnlocalizedName("boltIronLeggins").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronLegs");
+    	GameRegistry.registerItem(boltIronLegs, "boltironLegs");
+    	boltIronBoots = new BoltArmorNew(boltIronArmor, 3003, 3).setUnlocalizedName("boltIronBoots").setCreativeTab(bolttab).setTextureName(References.MODID + ":" + "boltArmourIronBoots");
+    	GameRegistry.registerItem(boltIronBoots, "boltironBoots");
     	
     	
     	

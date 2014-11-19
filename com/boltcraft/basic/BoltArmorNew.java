@@ -3,8 +3,8 @@ package com.boltcraft.basic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import com.boltcraft.basic.ClientProxy;
-//import net.lucrecious.tutorialmod.resources.References;
-//import net.lucrecious.tutorialmod.resources.Resource;
+import com.boltcraft.basic.References;
+import com.boltcraft.basic.Resource;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -17,11 +17,11 @@ import net.minecraft.item.ItemStack;
 
 public class BoltArmorNew extends ItemArmor{
 
-	public ArmorTM(ArmorMaterial material, int render_idx, int type) {
+	public BoltArmorNew(ArmorMaterial material, int render_idx, int type) {
 		super(material, render_idx, type);
 		
 		this.setMaxStackSize(1);
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(Boltcraft.bolttab);
 		
 	}
 	
@@ -49,7 +49,7 @@ public class BoltArmorNew extends ItemArmor{
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel (EntityLivingBase entityLiving, ItemStack itemstack, int armorSlot){
 		
-		ModelBiped armorModel = ProxyClient.armorModels.get(this);
+		ModelBiped armorModel = ClientProxy.armorModels.get(this);
 		
 		if(armorModel != null){
     		armorModel.bipedHead.showModel = armorSlot == 0;
@@ -103,7 +103,7 @@ public class BoltArmorNew extends ItemArmor{
 		String name = this.getUnwrappedUnlocalizedName(super.getUnlocalizedName());
 		name = name.substring(0, name.indexOf('_'));
 		
-		return String.format("%s:textures/models/armor/%s_layer_%d.png", References.mod_id, name, slot == 2 ? 2 : 1);
+		return String.format("%s:textures/models/armor/boltArmourIronLayer%d.png", References.mod_id, name, slot == 2 ? 2 : 1);
 	}
 	
 	
