@@ -114,8 +114,8 @@ public class Boltcraft
         BoltStructureBlockGen = new BoltStructureBlockGen().setBlockName("boltStructureBlockGen").setCreativeTab(bolttab).setBlockTextureName("diamond_block");
         GameRegistry.registerBlock(BoltStructureBlockGen, "boltStructureBlockGen");
         bolttwisterActive = new BoltTwister(true).setBlockName("BoltTwisterActive");
-        GameRegistry.registerBlock(bolttwisterActive, "BolttwisterActive");
-        bolttwister = new BoltTwister(true).setBlockName("BoltTwister");
+        GameRegistry.registerBlock(bolttwisterActive, "BolttwisterActive").setCreativeTab(bolttab).setBlockTextureName("cobblestone");
+        bolttwister = new BoltTwister(false).setBlockName("BoltTwister");
         GameRegistry.registerBlock(bolttwister, "BoltTwister");
         
         //recipes
