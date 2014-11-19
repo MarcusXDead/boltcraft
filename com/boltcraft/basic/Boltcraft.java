@@ -21,9 +21,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 
+@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
 
-//@NetworkRegistry(clientSideRequired=true, serverSideRequired=false)
-//@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class Boltcraft
 {
