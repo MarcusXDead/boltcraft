@@ -41,7 +41,7 @@ if(armorModel != null){
 	if(entityLiving instanceof EntityPlayer){
 		armorModel.aimedBow =((EntityPlayer)entityLiving).getItemInUseDuration() > 2; } 
 	return armorModel; 
-	return null; 
+	return null;
 	
 	
 	
