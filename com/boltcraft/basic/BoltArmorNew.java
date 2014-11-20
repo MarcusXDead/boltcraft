@@ -103,7 +103,7 @@ public class BoltArmorNew extends ItemArmor{
 		String name = this.getUnwrappedUnlocalizedName(super.getUnlocalizedName());
 		name = name.substring(0, name.indexOf('_'));
 		
-		return String.format("%s:textures/models/armor/%slayer_%d.png", References.mod_id, name, slot == 2 ? 2 : 1);
+		return String.format("%s:textures/models/armor/%s_layer_%d.png", References.mod_id, name, slot == 2 ? 2 : 1);
 	}
 	
 	
