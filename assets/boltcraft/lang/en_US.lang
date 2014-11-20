@@ -6,10 +6,10 @@ item.quartzBolt.name=Quartz Bolt
 item.ironNugget.name=Iron Nugget
 item.diamondShard.name=Diamond Shard
 item.quartzShard.name=Quartz Shard
-item.boltcraft:boltIronHelmet.name=Reinforced Iron Helmet
-item.boltcraft:boltIronChest.name=Reinforced Iron Chestplate
-item.boltcraft:boltIronLegs.name=Reinforced Iron Leggins
-item.boltcraft:boltIronBoots.name=Reinforced Iron Boots
+item.boltcraft:boltIron_Helmet.name=Reinforced Iron Helmet
+item.boltcraft:boltIron_Chest.name=Reinforced Iron Chestplate
+item.boltcraft:boltIron_Legs.name=Reinforced Iron Leggins
+item.boltcraft:boltIron_Boots.name=Reinforced Iron Boots
 tile.boltBlock.name=Bolt Block
 tile.boltStructureBlockGen.name=Bolt Block Structure
 

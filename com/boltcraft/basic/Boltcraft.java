@@ -45,14 +45,14 @@ public class Boltcraft
     //EnumArmorMaterial name = EnumHelper.addArmorMaterial(String name, int durability, int[] reductionAmounts, int enchantability)
     public static ArmorMaterial
     
-    boltIronArmor = EnumHelper.addArmorMaterial("boltIronArmor", 10,new int[]{3, 4, 5, 6}, 30);
+    boltIron_Material = EnumHelper.addArmorMaterial("boltIron_Material", 10,new int[]{3, 4, 5, 6}, 30);
     
     //armor
     
-    public static Item boltIronChest;
-    public static Item boltIronLegs;
-    public static Item boltIronBoots;
-    public static Item boltIronHelmet;
+    public static Item boltIron_Chest;
+    public static Item boltIron_Legs;
+    public static Item boltIron_Boots;
+    public static Item boltIron_Helmet;
     
     // items
     
@@ -71,7 +71,6 @@ public class Boltcraft
     public static Block bolttwisterActive;
  
     public static Block BoltStructureBlockGen;
-    public static Block Smallcastle;
 
   
     @EventHandler
@@ -79,14 +78,14 @@ public class Boltcraft
     {
     	//armor
     	
-    	boltIronHelmet = new BoltArmorNew(boltIronArmor, 3000, 0).setUnlocalizedName("boltIronHelmet").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronHelmet");
-    	GameRegistry.registerItem(boltIronHelmet, "boltironHelmet");
-    	boltIronChest = new BoltArmorNew(boltIronArmor, 3001, 1).setUnlocalizedName("boltIronChest").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronChest" );
-    	GameRegistry.registerItem(boltIronChest, "boltironChest");
-    	boltIronLegs = new BoltArmorNew(boltIronArmor, 3002, 2).setUnlocalizedName("boltIronLegs").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronLegs");
-    	GameRegistry.registerItem(boltIronLegs, "boltironLegs");
-    	boltIronBoots = new BoltArmorNew(boltIronArmor, 3003, 3).setUnlocalizedName("boltIronBoots").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIronBoots");
-    	GameRegistry.registerItem(boltIronBoots, "boltironBoots");
+    	boltIron_Helmet = new BoltArmorNew(boltIron_Material, 37100, 0).setUnlocalizedName("boltIron_Helmet").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Helmet");
+    	GameRegistry.registerItem(boltIron_Helmet, "boltiron_Helmet");
+    	boltIron_Chest = new BoltArmorNew(boltIron_Material, 37101, 1).setUnlocalizedName("boltIron_Chest").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Chest" );
+    	GameRegistry.registerItem(boltIron_Chest, "boltiron_Chest");
+    	boltIron_Legs = new BoltArmorNew(boltIron_Material, 37102, 2).setUnlocalizedName("boltIron_Legs").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Legs");
+    	GameRegistry.registerItem(boltIron_Legs, "boltiron_Legs");
+    	boltIron_Boots = new BoltArmorNew(boltIron_Material, 37103, 3).setUnlocalizedName("boltIron_Boots").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Boots");
+    	GameRegistry.registerItem(boltIron_Boots, "boltiron_Boots");
     	
     	
     	
@@ -135,7 +134,7 @@ public class Boltcraft
         
         //proxy
         
-        ClientProxy.register_renderers();
+        ClientProxy.registerRenderers();
         
 
     }
