@@ -18,11 +18,11 @@ public class ContainerBoltTwister extends Container {
 	private int lastBurnTime;
 	private int lastItemBurnTime;
 	
-	public ContainerBoltTwister(InventoryPlayer player, TileEntityBolttwister tileEntityFurnace){
-		this.tileFurnace = tileEntityFurnace;
-		this.addSlotToContainer(new Slot(tileEntityFurnace, 0, 56, 17));
-		this.addSlotToContainer(new Slot(tileEntityFurnace, 1, 56, 53));
-		this.addSlotToContainer(new SlotFurnace(player.player, tileEntityFurnace, 2, 116, 35));
+	public ContainerBoltTwister(InventoryPlayer player, TileEntityBolttwister tileEntityBolttwister){
+		this.tileFurnace = tileEntityBolttwister;
+		this.addSlotToContainer(new Slot(tileEntityBolttwister, 0, 56, 17));
+		this.addSlotToContainer(new Slot(tileEntityBolttwister, 1, 56, 53));
+		this.addSlotToContainer(new SlotFurnace(player.player, tileEntityBolttwister, 2, 116, 35));
 		int i;
 		
 		for(i = 0; i < 3; ++i){
