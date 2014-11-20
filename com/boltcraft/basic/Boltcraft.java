@@ -78,13 +78,13 @@ public class Boltcraft
     {
     	//armor
     	
-    	boltIron_Helmet = new BoltArmorNew(boltIron_Material, 37100, 0).setUnlocalizedName("boltIron_Helmet").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Helmet");
+    	boltIron_Helmet = new BoltArmorNew(boltIron_Material, 2, 0).setUnlocalizedName("boltIron_Helmet").setCreativeTab(bolttab);
     	GameRegistry.registerItem(boltIron_Helmet, "boltiron_Helmet");
-    	boltIron_Chest = new BoltArmorNew(boltIron_Material, 37101, 1).setUnlocalizedName("boltIron_Chest").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Chest" );
+    	boltIron_Chest = new BoltArmorNew(boltIron_Material, 2, 1).setUnlocalizedName("boltIron_Chest").setCreativeTab(bolttab);
     	GameRegistry.registerItem(boltIron_Chest, "boltiron_Chest");
-    	boltIron_Legs = new BoltArmorNew(boltIron_Material, 37102, 2).setUnlocalizedName("boltIron_Legs").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Legs");
+    	boltIron_Legs = new BoltArmorNew(boltIron_Material, 2, 2).setUnlocalizedName("boltIron_Legs").setCreativeTab(bolttab);
     	GameRegistry.registerItem(boltIron_Legs, "boltiron_Legs");
-    	boltIron_Boots = new BoltArmorNew(boltIron_Material, 37103, 3).setUnlocalizedName("boltIron_Boots").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "boltIron_Boots");
+    	boltIron_Boots = new BoltArmorNew(boltIron_Material, 2, 3).setUnlocalizedName("boltIron_Boots").setCreativeTab(bolttab);
     	GameRegistry.registerItem(boltIron_Boots, "boltiron_Boots");
     	
     	
