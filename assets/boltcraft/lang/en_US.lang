@@ -12,5 +12,6 @@ item.boltcraft:boltIron_Legs.name=Reinforced Iron Leggins
 item.boltcraft:boltIron_Boots.name=Reinforced Iron Boots
 tile.boltBlock.name=Bolt Block
 tile.boltStructureBlockGen.name=Bolt Block Structure
+tile.BoltChest.name=Reinforced Chest
 
 

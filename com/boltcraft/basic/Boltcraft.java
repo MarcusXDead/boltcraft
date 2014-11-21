@@ -2,8 +2,10 @@ package com.boltcraft.basic;
 
 import com.boltcraft.basic.References;
 import com.boltcraft.basic.Resource;
+import com.boltcraft.basic.TileEntityBoltcraftBasic;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,6 +19,7 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -33,6 +36,16 @@ public class Boltcraft
 	
 	@Instance(References.MODID)
 	public static Boltcraft modInstance;
+	
+	
+	
+	@EventHandler
+ 	public static void PreLoad(FMLPreInitializationEvent PreEvent){
+ 		
+		TileEntityBoltcraftBasic.mainRegistry();
+	
+		
+	}
 	
 	@EventHandler public void load(FMLInitializationEvent e) { }
     
@@ -69,7 +82,8 @@ public class Boltcraft
     public static Block boltblock;
     public static Block bolttwister;
     public static Block bolttwisterActive;
- 
+    public static Block BoltChest; 
+    
     public static Block BoltStructureBlockGen;
 
   
@@ -116,6 +130,8 @@ public class Boltcraft
         GameRegistry.registerBlock(bolttwisterActive, "BolttwisterActive").setCreativeTab(bolttab).setBlockTextureName("cobblestone");
         bolttwister = new BoltTwister(false).setBlockName("BoltTwister");
         GameRegistry.registerBlock(bolttwister, "BoltTwister");
+        BoltChest = new BoltChest(0).setBlockName("BoltChest").setCreativeTab(bolttab).setBlockTextureName(References.mod_id + ":BoltChest");
+        GameRegistry.registerBlock(BoltChest, BoltChest.getUnlocalizedName());
         
         //recipes
           
