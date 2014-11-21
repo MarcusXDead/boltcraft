@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -77,6 +78,12 @@ public class Boltcraft
     public static Item diamondshard;
     public static Item quartzshard;
     
+    //weapons
+    
+    public static ItemBow BoltBow = (ItemBow)Item.itemRegistry.getObject("BoltBow");
+    
+    
+    
     // blocks
     
     public static Block boltblock;
@@ -119,6 +126,12 @@ public class Boltcraft
         GameRegistry.registerItem(diamondshard, "diamondShard");
         quartzshard = new Item().setUnlocalizedName("quartzShard").setCreativeTab(bolttab).setTextureName(References.mod_id + ":" + "QuartzShard");
         GameRegistry.registerItem(quartzshard, "quartzShard");
+        
+        
+        //weapons
+        BoltBow = (ItemBow) new ItemBow().setUnlocalizedName("BoltBow").setCreativeTab(bolttab).setTextureName("bow");
+        GameRegistry.registerItem(BoltBow, "BoltBow");
+        
         
         //blocks
         
