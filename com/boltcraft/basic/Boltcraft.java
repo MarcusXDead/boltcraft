@@ -31,9 +31,10 @@ public class Boltcraft
 	
  
 	// proxy for armor
-			@SidedProxy(clientSide=References.proxy_client, serverSide=References.proxy_common)
-			public static CommonProxy proxy_common;
-			public static ClientProxy proxy_client;
+	
+	@SidedProxy(clientSide=References.proxy_client, serverSide=References.proxy_common)
+	public static CommonProxy proxy_common;
+	public static ClientProxy proxy_client;
 	
 	@Instance(References.MODID)
 	public static Boltcraft modInstance;
@@ -89,7 +90,8 @@ public class Boltcraft
     public static Block boltblock;
     public static Block bolttwister;
     public static Block bolttwisterActive;
-    public static Block BoltChest; 
+    public static Block BoltChest;
+    public static Block BoltTable; 
     
     public static Block BoltStructureBlockGen;
 
@@ -143,13 +145,15 @@ public class Boltcraft
         GameRegistry.registerBlock(bolttwisterActive, "BolttwisterActive").setCreativeTab(bolttab).setBlockTextureName("cobblestone");
         bolttwister = new BoltTwister(false).setBlockName("BoltTwister");
         GameRegistry.registerBlock(bolttwister, "BoltTwister");
-        BoltChest = new BoltChest(0).setBlockName("BoltChest").setCreativeTab(bolttab).setBlockTextureName(References.mod_id + ":BoltChest");
+        BoltChest = new BoltChest(0).setBlockName("BoltChest").setCreativeTab(bolttab);
         GameRegistry.registerBlock(BoltChest, BoltChest.getUnlocalizedName());
+        BoltTable = new BoltTable(Material.rock).setBlockName("BoltTable").setBlockTextureName(References.mod_id + ":" + "BoltTableBlock");
+        GameRegistry.registerBlock(BoltTable, "BoltTable");
         
         //recipes
           
         GameRegistry.addRecipe(new ItemStack(Boltcraft.boltiron, 1), new Object[] {"#", '#', Boltcraft.ironnugget});
-        GameRegistry.addRecipe(new ItemStack(Boltcraft.boltgold, 1), new Object[] {"#", '#', Boltcraft.ironnugget});
+        GameRegistry.addRecipe(new ItemStack(Boltcraft.boltgold, 1), new Object[] {"#", '#', Items.gold_nugget});
         GameRegistry.addRecipe(new ItemStack(Boltcraft.boltdiamond, 1), new Object[] {"#", '#', Boltcraft.diamondshard});
         GameRegistry.addRecipe(new ItemStack(Boltcraft.boltquartz, 1), new Object[] {"#", '#', Boltcraft.quartzshard});
         GameRegistry.addRecipe(new ItemStack(Boltcraft.ironnugget, 9), new Object[] {"#", '#', Items.iron_ingot});
