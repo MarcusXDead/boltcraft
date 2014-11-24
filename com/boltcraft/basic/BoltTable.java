@@ -13,7 +13,7 @@ public class BoltTable extends BlockContainer  {
 		this.setBlockBounds(0F, 0F, 0F, 1F, 0.875F, 1F);
 		this.setResistance(5.0F);
 		this.setHarvestLevel("pickaxe", 1);
-		
+		this.setBlockTextureName(References.mod_id + ":" + "BoltTableBlock");
 		this.setCreativeTab(Boltcraft.bolttab);
 	}
 	
@@ -32,7 +32,7 @@ public class BoltTable extends BlockContainer  {
 	
 	
 	@Override
-	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+	public TileEntity createNewTileEntity(World var1, int var2) {
 		return new TileEntityBoltTable();
 	}
 

@@ -129,7 +129,7 @@ public class ModelBoltTable1 extends ModelBase
       setRotation(ClawBase2, 0F, -1.570796F, 0.5934119F);
       ClawBase3 = new ModelRenderer(this, 4, 35);
       ClawBase3.addBox(0F, 0F, 0F, 1, 2, 1);
-      ClawBase3.setRotationPoint(-0.5F, 8.5F, -2.5F);
+      ClawBase3.setRotationPoint(-0.5F, 08.5F, -2.5F);
       ClawBase3.setTextureSize(64, 64);
       ClawBase3.mirror = true;
       setRotation(ClawBase3, 0F, 1.570796F, 0.5934119F);
@@ -183,9 +183,7 @@ public class ModelBoltTable1 extends ModelBase
 	   ClawBase1.render(f);
 	   ClawBase2.render(f);
 	   ClawBase3.render(f);
-	   ClawBase4.render(f);
-	  
-	  
+	   ClawBase4.render(f);	  
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
