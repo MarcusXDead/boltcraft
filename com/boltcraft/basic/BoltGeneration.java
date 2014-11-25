@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -31,6 +32,22 @@ public class BoltGeneration implements IWorldGenerator
 
 	private void generateSurface(World world, Random random, int x, int z)
 	{
+		
+		//Structure gen
+		
+		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
+		if ((biome == BiomeGenBase.plains))  {
+			for (int a = 0; a < 1; a++) {
+				int i = x + random.nextInt(256);
+				int j = z + random.nextInt(256);
+				int k = world.getHeightValue(i, j);
+				new BoltStructureSmallCastle().generate(world, random, i, j, k);
+				
+			}
+		}
+		
+		//Structure gen
+		
 		this.addOreSpawn(Boltcraft.boltblock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 15, 50);
 	}
 

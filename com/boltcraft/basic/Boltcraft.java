@@ -162,8 +162,8 @@ public class Boltcraft
         
         //generations
         
+        BoltGeneration eventWorldGen = new BoltGeneration();
         GameRegistry.registerWorldGenerator(new BoltGeneration(), 1);
-        GameRegistry.registerWorldGenerator(new Smallcastle(), 1);
         
         //proxy
         
