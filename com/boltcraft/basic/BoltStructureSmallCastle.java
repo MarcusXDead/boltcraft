@@ -41,7 +41,7 @@ public class BoltStructureSmallCastle extends WorldGenerator
 		Block block = world.getBlock(x, y, z);
 		Block blockAbove = world.getBlock(x, y + 1, z);
 		Block blockBelow = world.getBlock(x, y - 1, z);
-
+	
 		for (Block i : GetValidSpawnBlocks())
 		{
 			if (blockAbove != Blocks.air)
@@ -67,23 +67,29 @@ public class BoltStructureSmallCastle extends WorldGenerator
 	public boolean generate(World world, Random rand, int x, int y, int z)
 	{
 		int i = rand.nextInt(1);
-
+		
 		if(i == 0)
 		{
 		    generate_r0(world, rand, x, y, z);
+		    System.out.println("Generation triggered");
 		}
 
        return true;
+	
 
 	}
+	
 
 	public boolean generate_r0(World world, Random rand, int x, int y, int z)
 	{
 		if(!LocationIsValidSpawn(world, x, y, z) || !LocationIsValidSpawn(world, x + 22, y, z) || !LocationIsValidSpawn(world, x + 22, y, z + 17) || !LocationIsValidSpawn(world, x, y, z + 17))
 		{
+			System.out.println("Invalid location");
 			return false;
+			
 		}
-
+		
+		System.out.println("SetBlock Started");
 		world.setBlock(x + 0, y + 0, z + 0, Blocks.planks, 0, 3);
 		world.setBlock(x + 1, y + 0, z + 0, Blocks.planks, 0, 3);
 		world.setBlock(x + 2, y + 0, z + 0, Blocks.planks, 0, 3);
