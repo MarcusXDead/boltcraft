@@ -120,25 +120,25 @@ public class ModelBoltTable1 extends ModelBase
       ClawBase1.setRotationPoint(2.5F, 8.5F, -0.5F);
       ClawBase1.setTextureSize(64, 64);
       ClawBase1.mirror = true;
-      setRotation(ClawBase1, 0F, 0F, 0.5934119F);
+      setRotation(ClawBase1, 0F, 0F, 34F); //correct
       ClawBase2 = new ModelRenderer(this, 4, 35);
       ClawBase2.addBox(0F, 0F, 0F, 1, 2, 1);
-      ClawBase2.setRotationPoint(0.5F, 8.5F, 2.5F);
+      ClawBase2.setRotationPoint(-0.5F, 9.0F, 3.3F);
       ClawBase2.setTextureSize(64, 64);
       ClawBase2.mirror = true;
-      setRotation(ClawBase2, 0F, -1.570796F, 0.5934119F);
+      setRotation(ClawBase2, -90F, 56F, -90F); 
       ClawBase3 = new ModelRenderer(this, 4, 35);
       ClawBase3.addBox(0F, 0F, 0F, 1, 2, 1);
-      ClawBase3.setRotationPoint(-0.5F, 08.5F, -2.5F);
+      ClawBase3.setRotationPoint(-0.5F, 8.5F, -2.5F);
       ClawBase3.setTextureSize(64, 64);
       ClawBase3.mirror = true;
-      setRotation(ClawBase3, 0F, 1.570796F, 0.5934119F);
+      setRotation(ClawBase3, 90F, 56F, 90F); //correct
       ClawBase4 = new ModelRenderer(this, 4, 35);
       ClawBase4.addBox(0F, 0F, 0F, 1, 2, 1);
       ClawBase4.setRotationPoint(-2.5F, 8.5F, 0.5F);
       ClawBase4.setTextureSize(64, 64);
       ClawBase4.mirror = true;
-      setRotation(ClawBase4, 0F, 3.141593F, 0.5934119F);
+      setRotation(ClawBase4, 0F, 180F, -34F); //correct
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -188,9 +188,11 @@ public class ModelBoltTable1 extends ModelBase
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
   {
-    model.rotateAngleX = x;
-    model.rotateAngleY = y;
-    model.rotateAngleZ = z;
+	  model.rotateAngleX = (float) Math.toRadians(x);
+	  model.rotateAngleY = (float) Math.toRadians(y);
+	  model.rotateAngleZ = (float) Math.toRadians(z);
+    
+    
   }
   
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
