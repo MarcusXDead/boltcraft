@@ -32,14 +32,14 @@ public class BoltGeneration implements IWorldGenerator
 
 	private void generateSurface(World world, Random random, int x, int z)
 	{
-		/*
+		
 		//Structure gen
 		
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
 		if ((biome == BiomeGenBase.plains))  {
 			for (int a = 0; a < 1; a++) {
-				int i = x + random.nextInt(256);
-				int j = z + random.nextInt(256);
+				int i = x + random.nextInt(16);
+				int j = z + random.nextInt(16);
 				int k = world.getHeightValue(i, j);
 				new BoltStructureSmallcastle().generateTrigger(world, random, i, j, k);
 				
@@ -47,7 +47,7 @@ public class BoltGeneration implements IWorldGenerator
 		}
 		
 		//Structure gen
-		*/
+		
 		this.addOreSpawn(Boltcraft.boltblock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 15, 50);
 	}
 
