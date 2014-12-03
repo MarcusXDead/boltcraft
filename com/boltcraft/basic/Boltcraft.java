@@ -91,9 +91,11 @@ public class Boltcraft
     public static Block bolttwister;
     public static Block bolttwisterActive;
     public static Block BoltChest;
-    public static Block BoltTable; 
-    
     public static Block BoltStructureBlockGen;
+    
+    
+    
+    public static Block BoltTable = new BoltTable(Material.rock).setBlockName("BoltTable").setBlockTextureName(References.mod_id +":"+"BoltTableBlock");
 
   
     @EventHandler

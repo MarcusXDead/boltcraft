@@ -1,11 +1,13 @@
 package com.boltcraft.basic;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class BoltTable extends BlockContainer  {
+	
 
 	public BoltTable(Material material) {
 		super(material);
