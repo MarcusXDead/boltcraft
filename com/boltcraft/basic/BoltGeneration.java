@@ -41,7 +41,7 @@ public class BoltGeneration implements IWorldGenerator
 				int i = x + random.nextInt(16);
 				int j = z + random.nextInt(16);
 				int k = world.getHeightValue(i, j);
-				new BoltStructureSmallcastle().generateTrigger(world, random, i, j, k);
+				new BoltStructureSmallcastle().generateTrigger(world, random, i, k, j);
 				
 			}
 		}
