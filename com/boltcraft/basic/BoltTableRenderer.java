@@ -35,13 +35,19 @@ public class BoltTableRenderer extends TileEntitySpecialRenderer {
         this.BoltTableModel1 = new ModelBoltTable1();
     }
 	
-	/*
+	
 	ItemStack stack = new ItemStack(item, 1, 0);
-	EntityItem entItem = new EntityItem(Minecraft.getMinecraft().thePlayer.getEntityWorld(), 0D, 0D, 0D, stack);
-	*/
+	EntityItem entItem = null; //new EntityItem(Minecraft.getMinecraft().thePlayer.getEntityWorld(), 0D, 0D, 0D, stack)
+	
 	
 	@Override
 	public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
+		
+		if(this.entItem == null)
+		{
+		this.entItem = new EntityItem(tileentity.getWorldObj(), x, y, z, this.stack);
+		}
+		
 		GL11.glPushMatrix();
 			GL11.glTranslatef((float)x + 0.5F, (float)y + 1.5F, (float)z + 0.5F);
 			GL11.glRotatef(180,  0F,  0F, 1F); //180 0 0 1
@@ -53,7 +59,7 @@ public class BoltTableRenderer extends TileEntitySpecialRenderer {
 			GL11.glPopMatrix();
 		
 		GL11.glPopMatrix();
-		/*
+		
 		GL11.glPushMatrix();
 		//Without the below line, the item will spazz out
 		this.entItem.hoverStart = 0.0F;
@@ -63,7 +69,7 @@ public class BoltTableRenderer extends TileEntitySpecialRenderer {
 		RenderManager.instance.renderEntityWithPosYaw(this.entItem, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
 		RenderItem.renderInFrame = false;
 		GL11.glPopMatrix();
-		*/
+		
 	}
 
 }
