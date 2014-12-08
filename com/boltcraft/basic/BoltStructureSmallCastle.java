@@ -10,24 +10,28 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class BoltStructureSmallcastle extends WorldGenerator
 {
-	/*
+	
 	private Block[] GetValidSpawnBlocks() {
-		 return new Block[] { Blocks.grass, Blocks.snow_layer };
+		 return new Block[] { Blocks.grass, Blocks.dirt, Blocks.snow_layer };
 		 }
 		 public boolean LocationIsValidSpawn(World world, int x, int y, int z){
 		 Block blockAbove = world.getBlock(x, y + 1, z);//block above one thats placed.
 		 Block blockBelow = world.getBlock(x, y - 1, z);//block below one thats placed.
 		 for (Block i : GetValidSpawnBlocks()){
 		 if (blockAbove != Blocks.air){//is block above air ?
+		 System.out.println("Block above isn't air");
 		 return false;
 		 }
 		 else if(blockBelow == i){//is block below grass or grass_snow ?
+		 System.out.println("Block below is grass_snow");
 		 return true;
 		 }
 		 else if(blockBelow.getMaterial() == Material.plants){//is block below material == to plant material ?
+		 System.out.println("Block below is a plant");
 		 return true;
 		 }
 		 }
+		 System.out.println("Something went wrong");
 		 return false;
 		 }
 
@@ -49,13 +53,16 @@ public class BoltStructureSmallcastle extends WorldGenerator
 	{
 		if(LocationIsValidSpawn(world, x, y, z)  || !LocationIsValidSpawn(world, x + 22, y, z) || !LocationIsValidSpawn(world, x + 22, y, z + 17) || !LocationIsValidSpawn(world, x, y, z + 17))
 		{
+			System.out.println(x);
+			System.out.println(y);
+			System.out.println(z);
 			System.out.println("Invalid location");
 			return false;
 		}
 		
 		
-		*/
 		
+		/*
 		public boolean generateTrigger(World world, Random rand, int x, int y, int z)
 		{
 		int i = rand.nextInt(1);
@@ -70,6 +77,7 @@ public class BoltStructureSmallcastle extends WorldGenerator
 		}
 		
 		public void generate_r0(World world, Random rand, int x, int y, int z) {
+		
 		//test the area i want
 		//Area.test(world, x, y, z, 100, 100, 100, Blocks.grass);// one block
 		//Area.test(world, x, y, z, 100, 100, 100, Blocks.grass, Material.plants);// one block and material
@@ -81,7 +89,7 @@ public class BoltStructureSmallcastle extends WorldGenerator
 		System.out.println("valid area");
 		Area.numOfBlockInTestArea();
 		}
-		
+		*/
 		
 		
 		
@@ -1566,8 +1574,8 @@ public class BoltStructureSmallcastle extends WorldGenerator
 		world.setBlock(x + 3, y + 2, z + 11, Blocks.air, 0, 3);
 		world.setBlock(x + 4, y + 2, z + 11, Blocks.air, 0, 3);
 
-		generate_r02(world, rand, x, y, z);
-		return;
+		return generate_r02(world, rand, x, y, z);
+		
 
 	}
 	public boolean generate_r02(World world, Random rand, int x, int y, int z)
@@ -6340,11 +6348,6 @@ public class BoltStructureSmallcastle extends WorldGenerator
 		return true;
 
 	}
-	@Override
-	public boolean generate(World p_76484_1_, Random p_76484_2_,
-			int p_76484_3_, int p_76484_4_, int p_76484_5_) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 
 }
